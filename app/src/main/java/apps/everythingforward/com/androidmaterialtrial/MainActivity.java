@@ -5,16 +5,20 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.gc.materialdesign.views.Button;
 import com.skyfishjy.library.RippleBackground;
+import com.vstechlab.easyfonts.EasyFonts;
+
+import org.w3c.dom.Text;
 
 import tyrantgit.explosionfield.ExplosionField;
 
 public class MainActivity extends AppCompatActivity {
 
     Button button;
-
+    TextView textView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +47,9 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+        textView = (TextView)findViewById(R.id.textView);
+        textView.setTypeface(EasyFonts.captureIt(this));
 
 
 
