@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
@@ -9,8 +10,26 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="apps.everythingforward.com.androidmaterialtrial.MainActivity"
-    >
+    android:background="@color/colorPrimary">
 
+
+    <com.github.florent37.materialtextfield.MaterialTextField
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+
+
+        android:id="@+id/materialTextField">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+
+            android:textColor="#ff0000"
+            android:textColorHint="#ff0000"
+            android:textSize="15sp" />
+
+    </com.github.florent37.materialtextfield.MaterialTextField>
 
     <com.gc.materialdesign.views.ButtonRectangle
         android:id="@+id/button"
@@ -21,4 +40,26 @@
         android:layout_marginBottom="33dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
+
+    <com.skyfishjy.library.RippleBackground
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/content"
+        app:rb_color="#0099CC"
+        app:rb_radius="32dp"
+        app:rb_rippleAmount="4"
+        app:rb_duration="3000"
+        app:rb_scale="6">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:srcCompat="@drawable/kiosklogo"
+        android:layout_below="@+id/materialTextField"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="111dp"
+        android:id="@+id/imageView" />
+    </com.skyfishjy.library.RippleBackground>
 </RelativeLayout>
