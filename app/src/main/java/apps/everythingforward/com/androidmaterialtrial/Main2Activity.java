@@ -2,6 +2,7 @@ package apps.everythingforward.com.androidmaterialtrial;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.data.Entry;
@@ -29,6 +30,7 @@ public class Main2Activity extends AppCompatActivity {
         arrayList.add(new Entry(3,40));
 
         dataSet = new LineDataSet(arrayList,"Fake Data");
+        Toast.makeText(getApplicationContext(),"Stuff",Toast.LENGTH_SHORT).show();
 
     }
 
